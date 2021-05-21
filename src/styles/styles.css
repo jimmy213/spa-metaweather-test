@@ -1,0 +1,61 @@
+.search-bar .search-term {
+  display: flex;
+  justify-content: center;
+}
+.search-bar .search-term input {
+  width: 400px;
+  height: 50px;
+  padding: 0 16px;
+  margin-right: 20px;
+  box-shadow: 0px 3px 6px #00000029;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+.search-bar .search-term button {
+  border: none;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.main-view {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.main-view .content {
+  width: 100%;
+  height: 600px;
+  overflow-y: auto;
+  padding: 0 17px;
+}
+.main-view .content .result-view ul {
+  list-style: none;
+  padding: 4px;
+  box-shadow: 0px 3px 6px #00000029;
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ecccc0;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  /* Remove scrollbar space */
+  background: rgba(255, 255, 255, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #272727;
+}
+
+.App {
+  text-align: center;
+  padding: 40px;
+}/*# sourceMappingURL=styles.css.map */

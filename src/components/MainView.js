@@ -1,17 +1,27 @@
+import SubView from "./SubView"
+
 const MainView = ({ results }) => {
+
+    const handleSelect = () => {
+        
+    }
+
     return (
         <div className="main-view">
-            <h2>Results</h2>
-            {results.map(result => (
-                <div className="result-view" key={result.woeid}>
-                    <ul>
-                        <li>
-                            <h2>{ result.title }</h2>
-                            <h2>Lattitude, Longitude: { result.latt_long }</h2>
-                        </li>
-                    </ul>
-                </div>
-            ))}
+            {/* <h2>Results</h2> */}
+            <div className="content">
+                {results.map(result => (
+                    <div className="result-view" key={result.woeid}>
+                        <ul>
+                            <li onClick={handleSelect}>
+                                <h2>{ result.title }</h2>
+                                <h3>Latt, Long: { result.latt_long }</h3>
+                            </li>
+                        </ul>
+                    </div>
+                ))}
+            </div>
+            <SubView />
         </div>
     );
 }
