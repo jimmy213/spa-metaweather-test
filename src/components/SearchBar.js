@@ -4,13 +4,13 @@ import MainView from "./MainView"
 const SearchBar = () => {
 
     const [input, setInput] = useState('');
-    const [weatherData, setWeatherData] = useState(null);
+    const [citySearch, setCitySearch] = useState(null);
 
     const handleClick = inp => {
         fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?query=${inp}`)
         .then(res => res.json())
         .then(data => {
-            setWeatherData(data);
+            setCitySearch(data);
         });
     }
 
@@ -21,7 +21,7 @@ const SearchBar = () => {
                 <input type="text" placeholder="Search by City..." value={input} onInput={e => setInput(e.target.value)} />
                 <button onClick={ () => handleClick(input) }>Submit</button>
             </div>
-            {weatherData && <MainView results={weatherData} />}
+            {citySearch && <MainView results={citySearch} />}
         </div>
     );
 }

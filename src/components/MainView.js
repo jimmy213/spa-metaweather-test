@@ -1,19 +1,25 @@
+import { useState } from 'react'
 import SubView from "./SubView"
 
 const MainView = ({ results }) => {
 
-    const handleSelect = () => {
-        
+    const [weatherData, setWeatherData] = useState(null);
+
+    const handleSelect = woeid => {
+        fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}`)
+        .then(res => res.json())
+        .then(data => {
+            setWeatherData(data.consolidated_weather);
+        });
     }
 
     return (
         <div className="main-view">
-            {/* <h2>Results</h2> */}
             <div className="content">
                 {results.map(result => (
                     <div className="result-view" key={result.woeid}>
                         <ul>
-                            <li onClick={handleSelect}>
+                            <li onClick={() => handleSelect(result.woeid)}>
                                 <h2>{ result.title }</h2>
                                 <h3>Latt, Long: { result.latt_long }</h3>
                             </li>
@@ -21,7 +27,7 @@ const MainView = ({ results }) => {
                     </div>
                 ))}
             </div>
-            <SubView />
+            {weatherData && <SubView weather={weatherData} />}
         </div>
     );
 }
