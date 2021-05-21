@@ -9,14 +9,14 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: rgb(236, 204, 192);
+    background: rgb(255, 229, 204);
 }
 ::-webkit-scrollbar {
-    width: 2px;  /* Remove scrollbar space */
+    width: 2px;
     background: rgba(255, 255, 255, 0.4);
 }
 ::-webkit-scrollbar-thumb {
-    background: rgb(39, 39, 39);
+    background: rgb(252, 195, 173);
 }
 
 .App {
