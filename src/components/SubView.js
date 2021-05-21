@@ -3,7 +3,7 @@ const SubView = ({ weather }) => {
         <div className="sub-view">
             {weather.map(weather => (
                 <div className="weather-view" key={weather.id}>
-                    <ul>
+                    <ul className="weather-data">
                         <li>
                             <h4>{ weather.applicable_date }</h4>
                             <h2>{ weather.weather_state_name }</h2>
