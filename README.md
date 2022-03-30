@@ -2,4 +2,4 @@
 
 ### Utilizing [CORS Anywhere](https://cors-anywhere.herokuapp.com/) to bypass CORS limitation (only for development purposes).
 
-### Install the required node_modules using `npm install` and run the project with `npm start`.
+### Install the required node_modules using `npm install` and run the project with `npm start`. To properly function, go to [CORS Anywhere](https://cors-anywhere.herokuapp.com/) and request access.
